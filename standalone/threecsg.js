@@ -10,7 +10,7 @@
 */
 THREE.CSG = {
   // convert CSG object to three.js mesh.
-  fromCSG: function (csg, defaultColor, overlay) {
+  fromCSG: function (csg, defaultColor, overlay, overrideMaterial) {
 
     var i, j, vertices, face,
       three_geometry = new THREE.Geometry(),
@@ -76,7 +76,7 @@ THREE.CSG = {
       // trigger wireframe if opa == 0
       var asWireframe = (opa == 0);
       // if opacity == 0, this is just a wireframe
-      var phongMaterial = new THREE.MeshPhongMaterial({
+      var phongMaterial = overrideMaterial || new THREE.MeshPhongMaterial({
         opacity: opa || 1,
         wireframe: asWireframe,
         transparent: opa != 1 && opa != 0,
@@ -101,7 +101,7 @@ THREE.CSG = {
     var boundLen = three_geometry.boundingSphere.radius +
       three_geometry.boundingSphere.center.length() || 0;
 
-    var phongWireframeMaterial = new THREE.MeshPhongMaterial({
+    var phongWireframeMaterial = overrideMaterial || new THREE.MeshPhongMaterial({
       wireframe: true,
       transparent: false,
       color: 'black',

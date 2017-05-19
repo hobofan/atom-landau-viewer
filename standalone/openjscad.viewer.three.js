@@ -269,21 +269,31 @@ OpenJsCad.Viewer.ThreeEngine.prototype = {
     // default is opaque if not defined otherwise
     var defaultColor_ = [faceColor.r, faceColor.g, faceColor.b, faceColor.a || 1];
 
-    var res = THREE.CSG.fromCSG(csg, defaultColor_, this.options.solid.overlay);
-    var colorMeshes = [].concat(res.colorMesh)
-      .map(function (mesh) {
-        mesh.userData = {
-          faces: true
-        };
-        return mesh;
-      });
-    var wireMesh = res.wireframe;
-    wireMesh.userData = {
-      lines: true
-    };
-    this.scene_.add.apply(this.scene_, colorMeshes);
-    this.scene_.add(wireMesh);
-    resetZoom && this.resetZoom(res.boundLen);
+    csg.forEach(function(obj, i) {
+      var material = null
+      if (i != 0) {
+        console.log("WITH MATERIAL", i)
+        material = new THREE.MeshStandardMaterial({
+          opacity: 0.5,
+          transparent: true
+        });
+      }
+      var res = THREE.CSG.fromCSG(obj, defaultColor_, this.options.solid.overlay, material);
+      var colorMeshes = [].concat(res.colorMesh)
+        .map(function (mesh, i) {
+          mesh.userData = {
+            faces: true
+          };
+          return mesh;
+        });
+      var wireMesh = res.wireframe;
+      wireMesh.userData = {
+        lines: true
+      };
+      this.scene_.add.apply(this.scene_, colorMeshes);
+      this.scene_.add(wireMesh);
+      resetZoom && this.resetZoom(res.boundLen);
+    }, this);
     this.applyDrawOptions();
   },
 

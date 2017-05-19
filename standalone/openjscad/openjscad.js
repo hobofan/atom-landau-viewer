@@ -512,7 +512,7 @@ OpenJsCad.Viewer.prototype = {
         if (this.solid.overlay) gl.enable(gl.DEPTH_TEST);
       }
     }
-  // draw the plate and the axis 
+  // draw the plate and the axis
     gl.enable(gl.BLEND);
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
     gl.begin(gl.LINES);
@@ -595,7 +595,7 @@ OpenJsCad.Viewer.prototype = {
     for(var j = 0; j < numpolygons; j++) {
       var polygon = polygons[j];
       var color = this.solid.color;  // default color
-  
+
       if(polygon.shared && polygon.shared.color) {
         color = polygon.shared.color;
       } else if(polygon.color) {
@@ -949,7 +949,7 @@ OpenJsCad.Processor.prototype = {
       this.containerdiv.parentElement.appendChild(this.selectdiv);
     }
     element = document.createElement("input");
-    element.setAttribute("type", "range"); 
+    element.setAttribute("type", "range");
     element.id = 'startRange';
     element.min = 0;
     element.max = 100;
@@ -963,7 +963,7 @@ OpenJsCad.Processor.prototype = {
     };
     this.selectdiv.appendChild(element);
     element = document.createElement("input");
-    element.setAttribute("type", "range"); 
+    element.setAttribute("type", "range");
     element.id = 'endRange';
     element.min = 0;
     element.max = 100;
@@ -1111,7 +1111,8 @@ OpenJsCad.Processor.prototype = {
     if (startpoint > endpoint) { startpoint = this.selectEndPoint; endpoint = this.selectStartPoint; };
 
     var objs = this.currentObjects.slice(startpoint,endpoint+1);
-    this.viewedObject = OpenJsCad.Processor.convertToSolid(objs); // enforce CSG to display
+    // this.viewedObject = OpenJsCad.Processor.convertToSolid(objs); // enforce CSG to display
+    this.viewedObject = objs;
 
     if(this.viewer) {
       this.viewer.setCsg(this.viewedObject);

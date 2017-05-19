@@ -1,11 +1,12 @@
 {
-  "name": "jscad-viewer",
+  "name": "landau-viewer",
   "main": "./lib/jscad-viewer",
   "version": "1.2.0",
   "description": "View jscad files inside Atom.",
   "keywords": [
     "scad",
     "jscad",
+    "landau",
     "3d",
     "cad",
     "threejs"
@@ -17,7 +18,7 @@
     ]
   },
   "scripts": {},
-  "repository": "https://github.com/johnwebbcole/atom-jscad-viewer",
+  "repository": "https://github.com/landaujs/atom-landau-viewer",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0"
