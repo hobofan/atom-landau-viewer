@@ -1,7 +1,7 @@
 {
   "name": "landau-viewer",
   "main": "./lib/jscad-viewer",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "View jscad files inside Atom.",
   "keywords": [
     "scad",
