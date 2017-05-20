@@ -1,8 +1,8 @@
 {
   "name": "landau-viewer",
-  "main": "./lib/jscad-viewer",
+  "main": "./lib/landau-viewer",
   "version": "0.0.1",
-  "description": "View jscad files inside Atom.",
+  "description": "View Landau Components inside Atom.",
   "keywords": [
     "scad",
     "jscad",
@@ -13,8 +13,8 @@
   ],
   "activationCommands": {
     "atom-workspace": [
-      "jscad-viewer:toggle",
-      "jscad-viewer:preview-file"
+      "landau-viewer:toggle",
+      "landau-viewer:preview-file"
     ]
   },
   "scripts": {},

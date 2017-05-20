@@ -1,27 +1,27 @@
 # See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
 'context-menu':
-  'atom-pane[data-active-item-name$=\\.jscad] atom-text-editor': [
+  'atom-pane[data-active-item-name$=\\.js] atom-text-editor': [
     {
-      'label': 'View JSCAD'
-      'command': 'jscad-viewer:toggle'
+      'label': 'View Landau Component'
+      'command': 'landau-viewer:toggle'
     }
   ]
   # 'atom-pane[data-active-item-name$=\\.scad] atom-text-editor': [
   #   {
   #     'label': 'View SCAD'
-  #     'command': 'jscad-viewer:toggle'
+  #     'command': 'landau-viewer:toggle'
   #   }
   # ]
-  '.tree-view .file .name[data-name$=\\.jscad]': [
+  '.tree-view .file .name[data-name$=\\.js]': [
     {
-      'label': 'View JSCAD file'
-      'command':  'jscad-viewer:preview-file'
+      'label': 'View Landau file'
+      'command':  'landau-viewer:preview-file'
     }
   ]
   # '.tree-view .file .name[data-name$=\\.scad]': [
   #   {
   #     'label': 'View SCAD file'
-  #     'command':  'jscad-viewer:preview-file'
+  #     'command':  'landau-viewer:preview-file'
   #   }
   # ]
 'menu': [
@@ -32,7 +32,7 @@
       'submenu': [
         {
           'label': 'Toggle'
-          'command': 'jscad-viewer:toggle'
+          'command': 'landau-viewer:toggle'
         }
       ]
     ]
