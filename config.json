@@ -1,4 +1,10 @@
 {
+	"packagerUrl": {
+		"title": "landau-packager URL",
+		"description": "Base URL of the landau-packager",
+		"type": "string",
+		"default": "http://localhost:1938"
+	},
 	"drawLines": {
 		"title": "Draw lines",
 		"description": "Draw black triangle lines ('wireframe')",
