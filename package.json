@@ -1,7 +1,7 @@
 {
   "name": "landau-viewer",
   "main": "./lib/landau-viewer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "View Landau Components inside Atom.",
   "keywords": [
     "scad",
