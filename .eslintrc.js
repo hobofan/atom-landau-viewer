@@ -1,10 +1,10 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "commonjs": true,
-    "node": true
+  'parser': "babel-eslint",
+  'env': {
+    'node': true,
+    'browser': true,
   },
-  "extends": "eslint:recommended",
+  "extends": ["airbnb", "eslint:recommended"],
   "globals": {
     "atom": true
   },

@@ -1,6 +1,6 @@
 {
   "name": "landau-viewer",
-  "main": "./lib/landau-viewer",
+  "main": "./lib/landau-viewer.js",
   "version": "0.0.3",
   "description": "View Landau Components inside Atom.",
   "keywords": [
@@ -21,7 +21,7 @@
   "repository": "https://github.com/landaujs/atom-landau-viewer",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.0.0"
+    "atom": ">=1.17.0 <2.0.0"
   },
   "dependencies": {
     "async": "^2.1.4",
@@ -31,6 +31,11 @@
     "jquery-watch": "^1.21.0",
     "lodash": "^4.17.4",
     "loophole": "^1.1.0",
-    "three": "^0.83.0"
+    "three": "^0.83.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.2"
+  },
+  "devDependencies": {
+    "eslint-config-steelbrain": "^3.0.0"
   }
 }
