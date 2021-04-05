@@ -1,3 +1,5 @@
+# ⚠️ This repository is deprecated and doesn't work with @landaujs/landau-packager 0.2.0-alpha.1 and newer. Take a look at [landau-standalone-viewer](https://github.com/landaujs/landau-standalone-viewer) instead ⚠️
+
 # atom-landau-viewer - Atom plugin for Landau • [![apm](https://img.shields.io/apm/v/landau-viewer.svg?style=flat-square)](https://atom.io/packages/landau-viewer) [![apm-license](https://img.shields.io/apm/l/landau-viewer.svg?style=flat-square)]()
 
 ## Install
